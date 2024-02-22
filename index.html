@@ -7,20 +7,20 @@
     <title>Document</title>
   </head>
   <body>
-    <iframe
-      src="https://player.twitch.tv/?channel=streamerhouse&parent=127.0.0.1"
-      frameborder="0"
-      allowfullscreen="true"
-      scrolling="no"
-      height="378"
-      width="620"></iframe>
+    <div class="stream-and-chat-container">
+      <iframe
+        class="stream"
+        src="https://player.twitch.tv/?channel=streamerhouse&parent=127.0.0.1"
+        frameborder="0"
+        allowfullscreen="true"
+        scrolling="no"></iframe>
 
-    <iframe
-      src="https://www.twitch.tv/embed/streamerhouse/chat?parent=127.0.0.1"
-      allowfullscreen="true"
-      scrolling="no"
-      height="378"
-      width="620"></iframe>
+      <iframe
+        class="chat"
+        src="https://www.twitch.tv/embed/streamerhouse/chat?parent=127.0.0.1"
+        allowfullscreen="true"
+        scrolling="no"></iframe>
+    </div>
 
     <script src="script.js"></script>
   </body>
