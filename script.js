@@ -1,12 +1,32 @@
-// fetch('https://api.unsplash.com/photos/random/?count=5&client_id=52d8369eb3e2576a5f5b6423865e074e9c7045761bff1ac5664ff3e0bdb57a1d')
-//   .then(response => response.json())
-//   .then(data => {
-//     data.forEaach(function(image, i) {
-//       document.querySelector("#slide-" + (i+1)).innerHTML = `
-//         <img src="${image.urls.regular}" alt="">
-//         <p class="author-info">
-//           <a href="${image.links.html}?utm_source=slider-thing&utm_medium=referral&utm_campaign=api-credit">Photo by ${image.user.name}</a> on <a href="https://unsplash.com/">Unsplash</a>
-//         </p>
-//       `;
-//     });
-//   });
+var slidePosition = 1;
+SlideShow(slidePosition);
+
+// forward/Back controls
+function plusSlides(n) {
+  SlideShow((slidePosition += n));
+}
+
+//  images controls
+function currentSlide(n) {
+  SlideShow((slidePosition = n));
+}
+
+function SlideShow(n) {
+  var i;
+  var slides = document.getElementsByClassName("Containers");
+  var circles = document.getElementsByClassName("dots");
+  if (n > slides.length) {
+    slidePosition = 1;
+  }
+  if (n < 1) {
+    slidePosition = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < circles.length; i++) {
+    circles[i].className = circles[i].className.replace(" enable", "");
+  }
+  slides[slidePosition - 1].style.display = "block";
+  circles[slidePosition - 1].className += " enable";
+}
