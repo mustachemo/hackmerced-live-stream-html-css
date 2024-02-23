@@ -1,19 +1,41 @@
-* {
+html,
+body {
+  height: 100%; /* Make sure the html and body are full height */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-image: linear-gradient(
+    to right top,
+    #342153,
+    #61255c,
+    #8b2a5c,
+    #af3752,
+    #c84f42,
+    #cd5a3b,
+    #d16634,
+    #d3722c,
+    #cf6b30,
+    #ca6534,
+    #c55f37,
+    #c0593a
+  );
+}
+
+/* #342153 #D77B26 #C0593A */
 
 .stream-and-chat-container {
   position: relative;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   align-items: stretch;
   border: 1px solid black;
-  width: 100%;
-  height: 75vh;
+  width: 50%;
+  height: 50%;
 }
 
 .stream {
